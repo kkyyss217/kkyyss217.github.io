@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+#titleStyle{
+    border:1px solid #000;
+    height:45px;
+    width:180px;
+    text-decoration:none;
+    color:#fff;
+    background:rgb(78, 78, 201);
+    display:inline-block;
+    text-align:center;
+}
+.box {
+    border: 1px solid #000;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+#main{
+    margin: auto;
+    max-width:500px;
+    min-height:200px;
+    border: 1px solid #fff;
+    padding: 20px;
+}
+#btnSave{
+    padding: 5px;
+    margin-top: 5px;
+    background:cadetblue;
+    color: #fff;
+    border: 0;
+}
+table{
+    border:1px solid #ddd;
+    width: 100%;
+}
+table td{
+    border:1px solid #000;
+}
