@@ -10,18 +10,28 @@
 </head>
 
 <body>
-    <div id="main">
-        <h1><a id="titleStyle" href="https://kkyyss217.github.io/phonebook/phonebook" target="_top"  title="Phonebook">Phonebook</a></h1></p>
         
-        <form action="https://kkyyss217.github.io/phonebook/phonebook" method="get">
-         Last Name<br/><input id="ln" type="text" />
-         <br/>First Name<br/><input id="fn" type="text" />
-         <br/>Phone Number<br/><input id="phone" type="text"/>
-         <input type="reset">
+    <div id="main">
+        <!-- <h1><a id="titleStyle" href="https://kkyyss217.github.io/phonebook/phonebook" target="_top"  title="Phonebook">Phonebook</a></h1></p> -->
+        <div class="spinner">
+            <div class="rect1">p</div>
+            <div class="rect2">h</div>
+            <div class="rect3">o</div>
+            <div class="rect4">n</div>
+            <div class="rect5">e</div>
+            <div class="rect6">b</div>
+            <div class="rect7">o</div>
+            <div class="rect8">o</div>
+            <div class="rect9">k</div>
+        </div>
+        <!-- <form action="https://kkyyss217.github.io/phonebook/phonebook" method="get"> -->
+        <form>
+            Last Name<br/><input id="ln" type="text" />
+            <br/>First Name<br/><input id="fn" type="text" />
+            <br/>Phone Number<br/><input id="phone" type="text"/>
+            <input type="reset">
         </form>
         <button id="btnSave">Save</button>
-        
-
         <table id="mytable">
             <tr>
                 <th>Last Name</th>
@@ -29,7 +39,9 @@
                 <th>Phone Number</th>
             </tr>
         </table>
+        
     </div>
+    
 </body>
 
 <script src="phonebook.js"></script>
