@@ -1,0 +1,31 @@
+body{
+    background:#f90;
+}
+#main{
+    width:960px;
+    min-height: 500px;
+    margin: auto;
+    background: #fff;
+}
+.box{
+    margin:auto;
+    width:90%;
+    height:120px;
+    border:1px solid #aaa;
+}
+#mycircle1{
+    fill:#f90;
+    animation-name:choihyunkyu;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+@keyframes choihyunkyu{
+    50%{
+        fill:red;
+        cx:750px;
+    }
+    0%{
+        cx:30px;
+    }
+}
