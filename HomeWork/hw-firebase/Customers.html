@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customers</title>
+    <style>
+        #main{
+            width:700px;
+            margin:auto;
+            border:5px solid #aaa;
+            padding:10px;
+        }
+        input{
+            padding:5px;
+            font-size:1.2em;
+            margin-bottom:5px;
+        }
+        #list{
+            margin:auto;
+            text-align: center;
+            width:800px;
+        }
+        p{
+            margin-left:60%;
+        }
+        #btn_logout{
+            margin-left:70%;
+            margin-bottom:20px;
+        }
+        a{
+            margin-left:25%;
+        }
+    </style>
+</head>
+<body>
+    <p id="user_para"></p><button id="btn_logout" onclick="logout()">logout</button><br/>
+    <a href="Index.html">Home</a><br/><br/>
+    <div id="main">
+        <h1>Customers</h1>
+        ID <input type="text" id="id" maxlength="5"><br/>
+        LAST NAME <input type="text" id="lastname" maxlength="10"><br/>
+        FIRST NAME <input type="text" id="firstname" maxlength="15"><br/>
+        BIRTH DAY <input type="date" id="birthday"><br/>
+        <button id="button_save">Save</button>
+    </div>
+    <table id="list" width=100% border="1">
+        <tr><th><button onclick ="tablesort(0)">ID</button></th><th><button onclick ="tablesort(1)">LAST NAME</button></th><th><button onclick ="tablesort(2)">FIRST NAME</button></th><th><button onclick ="tablesort(3)">BIRTHDAY</button></th><th><button onclick ="tablesort(4)">AGE</button></th><th><button onclick ="tablesort(2)">Actions</button></th></tr>
+    </table>
+
+    
+<script src="Customers.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+</body>
+</html>
