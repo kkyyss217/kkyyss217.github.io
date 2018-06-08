@@ -12,7 +12,7 @@ function setupFirebase(){
     };
     firebase.initializeApp(config);
 
-    var ref = firebase.database().ref("Customers");
+    var ref = firebase.database().ref("Employees");
 
     //when child is added
     ref.on("child_added",function(snap){
@@ -55,7 +55,7 @@ function setupFirebase(){
             
             // <a href="#">   --->   parent : td   --->   parent : tr
             var prod_id = this.parentElement.parentElement.id;
-            var product = firebase.database().ref("Customers").child(prod_id);
+            var product = firebase.database().ref("Employees").child(prod_id);
             product.remove();
             var tr_del = document.querySelector("#" + prod_id);
             tr_del.remove();
@@ -110,7 +110,7 @@ window.onload = function(){
         console.log(birthday);
         console.log(position);
 
-        firebase.database().ref().child("Customers").push().set(
+        firebase.database().ref().child("Employees").push().set(
             {
                 //  firebase : source in code
                 id:id,
