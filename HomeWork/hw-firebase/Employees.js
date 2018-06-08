@@ -1,8 +1,5 @@
 //app.js
 
-var koreanAge;
-var age;
-
 function setupFirebase(){
     //Initialize Firebase
     var config = {
@@ -48,7 +45,7 @@ function setupFirebase(){
         td_lastname.innerText = snap.child("lastname").val();
         td_firstname.innerText = snap.child("firstname").val();
         td_birthday.innerText = snap.child("birthday").val();
-        td_age.innerText = koreanAge;
+        td_age.innerText = calcAge(td_birthday.innerText);
         td_position.innerText = snap.child("position").val();
 
         action.innerText = "Delete";
@@ -107,7 +104,6 @@ window.onload = function(){
         var firstname = document.querySelector("#firstname").value;
         var birthday = document.querySelector("#birthday").value;
         var position = document.querySelector("#position").value;
-
         console.log(id);
         console.log(lastname);
         console.log(firstname);
@@ -171,45 +167,12 @@ function tablesort(n){ //성 정렬, 이름 정렬, 생일 정렬 총 3개만들
     }
 }
 
-document.forms.date.onclick = function () { 
-    var input = this.elements.birthday; 
-    // 오늘 
-    var today = new Date; 
-    // 올해 
-    var todayYear = today.getFullYear(); 
-    // 생일 
-    var birthday = new Date(input.value); 
-    // 생일 해 
-    var birthdayYear = birthday.getFullYear(); 
-    if(birthdayYear < todayYear - 150){ 
-           alert('나이가 너무 적습니다.'); 
-           input.focus(); 
-           return false; 
-    } 
-    // 생일을 올해 23:59:59.999 로 변경 
-    birthday.setFullYear(todayYear); 
-    birthday.setHours(23); 
-    birthday.setMinutes(59); 
-    birthday.setSeconds(59); 
-    birthday.setMilliseconds(999); 
-    // 나이 
-    age = todayYear - birthdayYear - 1; 
-    // 생일 지났으면 + 1 
-    if (today > birthday) { 
-           age++; 
-    } 
-    // 한국 나이 
-    koreanAge = todayYear - birthdayYear + 1; 
-    // 결과 출력 
-
-    console.log(age);
-    console.log(koreanAge);
-    //document.getElementById('age').innerHTML = age; 
-    //document.getElementById('korean-age').innerHTML = koreanAge; 
-    //return false; 
-} 
-
 function logout(){
     firebase.auth().signOut();
     window.location.assign("Index.html");
+}
+
+function calcAge(dateString) {
+    var birthday = +new Date(dateString);
+    return~~ ((Date.now() - birthday) / (31557600000));
 }

@@ -45,7 +45,7 @@ function setupFirebase(){
         td_lastname.innerText = snap.child("lastname").val();
         td_firstname.innerText = snap.child("firstname").val();
         td_birthday.innerText = snap.child("birthday").val();
-        td_age.innerText = snap.child("age").val();
+        td_age.innerText = calcAge(td_birthday.innerText);
 
         action.innerText = "Delete";
         action.href="#";
@@ -165,4 +165,9 @@ function tablesort(n){ //성 정렬, 이름 정렬, 생일 정렬 총 3개만들
 function logout(){
     firebase.auth().signOut();
     window.location.assign("Index.html");
+}
+
+function calcAge(dateString) {
+    var birthday = +new Date(dateString);
+    return~~ ((Date.now() - birthday) / (31557600000));
 }
