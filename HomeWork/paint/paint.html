@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paint</title>
+    <link rel="stylesheet" type="text/css" href="paint.css"/>
+</head>
+<body>
+    <div id="main">
+
+        <div id="toolbar">
+            <div id="rad">
+                <input type="range" min="1" max="50" id="radius" oninput="slider()"/>
+                Pen Size <span id="sliderVal"></span>
+                <button onclick="myFunction()">Change</button>
+            </div>
+            <div id="colors">
+            </div>
+
+            <button id="eraser">Eraser</button>
+        </div>
+        <canvas width="1000" height="1000" id="mycanvas">
+        </canvas>
+    </div>
+</body>
+<script src="paint.js"></script>
+</html>

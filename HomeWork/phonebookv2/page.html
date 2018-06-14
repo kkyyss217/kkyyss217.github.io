@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="page.css">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mytable">
+        <tr>
+            <th id="name" onclick="sort()">Name</th>
+            <th id="email">Email</th>
+            <th id="phone">Phone</th>
+            <th id="address">Address</th>
+            <th id="city">City</th>
+            <th id="delete">Delete</th>
+        </tr>
+        
+        <div class="entry">
+            <tr>
+                <td class="name">name</td>
+                <td class="email">email</td>
+                <td class="phone">phone</td>
+                <td class="address">address</td>
+                <td class="city">city</td>
+                <td class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></td>
+            </tr>
+        </div>
+    </table>
+</body>
+</html>

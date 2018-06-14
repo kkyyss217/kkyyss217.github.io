@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AddressBook</title>
+	<link rel="stylesheet" href="phonebook2.css">
+	<script src="phonebook2.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<h1>Phone Book</h1>
+		</div>
+        <div class="quickadd">
+            <button id="QuickAdd">+ Add</button>
+            <input type="text" id="search" placeholder="Name">
+            <button onclick="search_Btn()">Search</button>
+
+        </div>
+		<div class="quickaddForm">
+			<label for="fullname">Name</label><input type="text" id="fullname" maxlength="10" class="formFields">
+			<label for="phone">Phone</label><input type="text" id="phone" maxlength="14" class="formFields">
+			<label for="address">Address</label><textarea name="address" id="address" maxlength="25" cols="30" rows="10" class="formFields"></textarea>
+			<label for="city">City</label><input type="text" id="city" maxlength="12" class="formFields">
+			<label for="email">E-Mail</label><input type="text" id="email" maxlength="20" class="formFields">
+			<br><br>
+			<button id="Add">Add Now</button><button id="Cancel">Cancel</button>
+        </div>
+        
+		<div class="addbook">
+			<!-- <div class="entry">
+				<div class="name"><p>Sachin Bhatnagar</p></div>
+				<div class="email"><p>sachin@frameboxx.in</p></div>
+				<div class="phone"><p>9316523541</p></div>
+				<div class="address"><p>House No. 8, Sector 10 - A</p></div>
+				<div class="city"><p>Chandigarh</p></div>
+				<div class="del"><a href="#">Delete</a></div>
+			</div> -->
+			
+		</div>
+	</div>
+</body>
+</html>
