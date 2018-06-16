@@ -14,5 +14,5 @@ function aboutme(){
 	view.innerText="Suwon University  ( 15054051 )\n\n"+"Major : Information of Security\n\n"+"Myname is Choi Hyunkyu\n\n";
 }
 function links(){
-	view.innerHTML = '<a href="http://github.com">GitHub</a></br></br>';	
+	view.innerHTML = '<a href="http://github.com"> GitHub</a></br></br>';	
 }
